@@ -1,0 +1,8 @@
+.mat-card-image {
+  width: auto;
+}
+
+mat-card {
+  width: 250px;
+  height: 250px;
+}

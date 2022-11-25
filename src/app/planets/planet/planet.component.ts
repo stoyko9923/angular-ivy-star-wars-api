@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Planet } from '../models/planet';
 import { PlanetsDataService } from '../planets-data.service';
 
 @Component({
@@ -9,13 +10,12 @@ import { PlanetsDataService } from '../planets-data.service';
   styleUrls: ['./planet.component.css'],
 })
 export class PlanetComponent implements OnInit {
-  planet$: Observable<any>;
+  @Input() planet: Planet;
 
   constructor(
     private route: ActivatedRoute,
-    private api: PlanetsDataService
-  ) // private location: Location
-  {}
+    private api: PlanetsDataService // private location: Location
+  ) {}
 
   ngOnInit() {
     this.getPlanet();
@@ -23,6 +23,6 @@ export class PlanetComponent implements OnInit {
 
   getPlanet() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.planet$ = this.api.getPlanet(id);
+    this.api.getPlanet(id).subscribe((planet) => (this.planet = planet));
   }
 }
