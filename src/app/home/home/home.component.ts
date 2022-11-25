@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Planet } from '../../planets/models/planet';
+import { PlanetsService } from '../../planets/planets.service';
 
 @Component({
   selector: 'home',
@@ -6,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  planets$: Observable<Planet[]>;
+  constructor(public planetService: PlanetsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPlanets();
+  }
+
+  getPlanets() {
+    this.planets$ = this.planetService.planets$;
+  }
 }

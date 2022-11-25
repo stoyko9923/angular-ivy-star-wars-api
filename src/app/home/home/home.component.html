@@ -1,1 +1,9 @@
-<p>Hello dashboard works!</p>
+<p>Hello from home!</p>
+
+<ul>
+  <li *ngFor="let planet of planets$ | async">
+    <a [routerLink]="planetService.getPlanetId(planet)">
+      {{ planet.name }}
+    </a>
+  </li>
+</ul>

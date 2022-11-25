@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let planet of planets$ | async">
-    <a [routerLink]="getPlanetId(planet)">
+    <a [routerLink]="service.getPlanetId(planet)">
       {{ planet.name }}
     </a>
   </li>
