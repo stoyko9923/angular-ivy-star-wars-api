@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlanetsModule } from './planets/planets.module';
-import { DashboardModule } from './dashboard/dashboard.module';
+import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AppRoutingModule } from '../app-routing.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    DashboardModule,
+    HomeModule,
     PlanetsModule,
     AppRoutingModule,
   ],
