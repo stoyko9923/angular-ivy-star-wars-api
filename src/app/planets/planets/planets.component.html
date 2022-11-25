@@ -1,3 +1,7 @@
-<p>
-planets works!
-</p>
+<ul>
+  <li *ngFor="let planet of planets$ | async">
+    {{ planet.name }} {{ planet.climate }}
+  </li>
+</ul>
+
+<h1>waza</h1>

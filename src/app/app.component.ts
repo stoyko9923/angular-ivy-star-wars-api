@@ -9,13 +9,5 @@ import { ApiService } from './services/api.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-
-  planets$: Observable<any>;
-
-  constructor(private api: ApiService) {}
-
-  ngOnInit() {
-    this.planets$ = this.api.getPlanets().pipe(map((data) => data.results));
-  }
+  constructor() {}
 }

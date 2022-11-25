@@ -7,12 +7,8 @@ interface Planet {
 }
 
 @Injectable({ providedIn: 'root' })
-export class ApiService {
+export abstract class ApiService {
   baseUrl: string = 'https://swapi.dev/api/';
 
-  constructor(public http: HttpClient) {}
-
-  getPlanets() {
-    return this.http.get<any>(`${this.baseUrl}planets`);
-  }
+  constructor(protected http: HttpClient) {}
 }
