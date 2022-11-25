@@ -1,5 +1,7 @@
 <ul>
   <li *ngFor="let planet of planets$ | async">
-    {{ planet.name }} {{ planet.climate }}
+    <a [routerLink]="getPlanetId(planet)">
+      {{ planet.name }}
+    </a>
   </li>
 </ul>

@@ -6,4 +6,8 @@ export class PlanetsDataService extends ApiService {
   getPlanets() {
     return this.http.get<any>(`${this.baseUrl}planets`);
   }
+
+  getPlanet(id: number) {
+    return this.http.get<any>(`${this.baseUrl}planets/${id}`);
+  }
 }

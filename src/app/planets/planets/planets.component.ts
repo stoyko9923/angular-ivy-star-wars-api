@@ -16,4 +16,10 @@ export class PlanetsComponent implements OnInit {
   ngOnInit() {
     this.planets$ = this.service.planets$;
   }
+
+  getPlanetId(planet: any) {
+    let url = planet.url as string;
+    let strings = url.split('/');
+    return strings[strings.length - 2];
+  }
 }
