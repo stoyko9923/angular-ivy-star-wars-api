@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlanetsModule } from './planets/planets.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from '../app-routing.module';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { AppRoutingModule } from '../app-routing.module';
     HomeModule,
     PlanetsModule,
     AppRoutingModule,
+    // MaterialModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

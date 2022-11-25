@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit {
   getPlanets() {
     this.planets$ = this.planetService.planets$;
   }
+
+  waza() {
+    return 13;
+  }
 }

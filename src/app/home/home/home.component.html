@@ -2,7 +2,10 @@
 
 <ul>
   <li *ngFor="let planet of planets$ | async">
-    <a [routerLink]="planetService.getPlanetId(planet)">
+    <a
+      replaceUrl="true"
+      [routerLink]="['../planets', planetService.getPlanetId(planet)]"
+    >
       {{ planet.name }}
     </a>
   </li>
