@@ -1,3 +1,6 @@
-planet ::ng-deep mat-card {
-  float: left;
+.planets {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: 10px;
 }

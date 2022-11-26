@@ -3,6 +3,10 @@
 }
 
 mat-card {
-  width: 250px;
-  height: 250px;
+  width: auto;
+  height: auto;
+}
+
+:host {
+  margin: 5px;
 }
