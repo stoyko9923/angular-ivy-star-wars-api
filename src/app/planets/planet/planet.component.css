@@ -8,4 +8,12 @@ mat-card {
 }
 
 mat-card-title {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+mat-card-subtitle {
+  font-size: medium;
+  font-weight: lighter;
+  font-style: italic;
 }
