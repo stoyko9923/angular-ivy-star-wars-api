@@ -1,13 +1,10 @@
-<p>Hello from home!</p>
-
-<!-- <ul> -->
 <div class="planets">
-  <!-- <a
-      replaceUrl="true"
-      [routerLink]="['../planets', planetService.getPlanetId(planet)]"
-    >
-      {{ planet.name }}
-    </a> -->
-  <planet [planet]="planet" *ngFor="let planet of planets$ | async"></planet>
+  <div class="planet" *ngFor="let planet of planets$ | async">
+    <a [routerLink]="['../planets', planetService.getPlanetId(planet)]">
+      <planet
+        [planet]="planet"
+        
+      ></planet>
+    </a>
+  </div>
 </div>
-<!-- </ul> -->
