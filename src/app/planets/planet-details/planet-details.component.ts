@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Planet } from '../models/planet';
+import { PlanetsDataService } from '../planets-data.service';
 
 @Component({
   selector: 'planet-details',
