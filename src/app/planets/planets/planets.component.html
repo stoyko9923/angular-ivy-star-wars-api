@@ -1,7 +1,0 @@
-<ul>
-  <li *ngFor="let planet of planets$ | async">
-    <a [routerLink]="service.getPlanetId(planet)">
-      {{ planet.name }}
-    </a>
-  </li>
-</ul>

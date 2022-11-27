@@ -4,10 +4,11 @@
     mat-card-image
     src="https://placekitten.com/100/200"
     alt="Photo of planet {{ planet.name }}"
-    width="100"
-    height="200"
   />
-  <mat-card-content> </mat-card-content>
+  <mat-card-content>
+    Population: {{ planet.population }}, Orbital period:
+    {{ planet.orbitalPeriod }}, Rotation Period: {{ planet.rotationPeriod }}
+  </mat-card-content>
   <mat-card-footer>
     <mat-card-title>{{ planet.name }}</mat-card-title>
     <mat-card-subtitle>{{ planet.terrain }}</mat-card-subtitle>

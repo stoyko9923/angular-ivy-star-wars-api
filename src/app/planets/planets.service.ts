@@ -12,9 +12,7 @@ export class PlanetsService {
   }
 
   getPlanets() {
-    this.planets$ = this.api
-      .getPlanets()
-      .pipe(map((data) => data.results as Planet[]));
+    this.planets$ = this.api.getPlanets();
   }
 
   getPlanetId(planet: Planet) {

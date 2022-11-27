@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { Planet } from '../models/planet';
 import { PlanetsDataService } from '../planets-data.service';
 
@@ -11,8 +11,9 @@ import { PlanetsDataService } from '../planets-data.service';
 })
 export class PlanetDetailsComponent implements OnInit {
   @Input() planet: Planet;
+  subscriptions: Subscription[] = [];
 
-  constructor() {}
+  constructor(private route: ActivatedRoute, private api: PlanetsDataService) {}
 
   ngOnInit() {
     this.getPlanet();
@@ -20,6 +21,13 @@ export class PlanetDetailsComponent implements OnInit {
 
   getPlanet() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.api.getPlanet(id).subscribe((planet) => (this.planet = planet));
+    const subsciption = this.api
+      .getPlanet(id)
+      .subscribe((planet) => (this.planet = planet));
+    this.subscriptions.push(subsciption);
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach((s) => s.unsubscribe());
   }
 }
