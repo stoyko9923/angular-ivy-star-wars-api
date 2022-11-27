@@ -10,7 +10,7 @@ import { PlanetsDataService } from '../planets-data.service';
   styleUrls: ['./planet-details.component.css'],
 })
 export class PlanetDetailsComponent implements OnInit {
-  @Input() planet: Planet;
+  planet: Planet;
   subscriptions: Subscription[] = [];
 
   constructor(private route: ActivatedRoute, private api: PlanetsDataService) {}
@@ -24,6 +24,7 @@ export class PlanetDetailsComponent implements OnInit {
     const subsciption = this.api
       .getPlanet(id)
       .subscribe((planet) => (this.planet = planet));
+
     this.subscriptions.push(subsciption);
   }
 

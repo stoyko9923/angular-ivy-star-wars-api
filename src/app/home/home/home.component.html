@@ -1,10 +1,15 @@
 <div class="planets">
   <div class="planet" *ngFor="let planet of planets$ | async">
     <a [routerLink]="['../planets', planetService.getPlanetId(planet)]">
-      <planet
-        [planet]="planet"
-        
-      ></planet>
+      <planet [planet]="planet"></planet>
+    </a>
+  </div>
+</div>
+
+<div class="starships">
+  <div class="starship" *ngFor="let starship of starships$ | async">
+    <a [routerLink]="['../starships', starshipService.getStarshipId(starship)]">
+      <starship [starship]="starship"></starship>
     </a>
   </div>
 </div>

@@ -1,10 +1,12 @@
-.planets {
+.planets,
+.starships {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
 
-.planet {
+.planet,
+.starship {
   margin: 10px;
 }
 
