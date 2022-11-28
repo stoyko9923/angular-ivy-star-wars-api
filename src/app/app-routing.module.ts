@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './app/home/home/home.component';
-import { PlanetDetailsComponent } from './app/planets/planet-details/planet-details.component';
-import { StarshipDetailsComponent } from './app/starships/starship-details/starship-details.component';
+import { HomeComponent } from './home/home/home.component';
+import { PlanetDetailsComponent } from './planets/planet-details/planet-details.component';
+import { StarshipDetailsComponent } from './starships/starship-details/starship-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
