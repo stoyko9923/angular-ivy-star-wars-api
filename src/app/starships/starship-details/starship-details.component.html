@@ -4,8 +4,13 @@
     mat-card-image
     src="https://placekitten.com/300/300"
     alt="Photo of starship {{ starship.name }}"
+    width="500"
+    height="500"
   />
-  <mat-card-content> </mat-card-content>
+  <mat-card-content>
+    Crew: {{ starship.crew }}, Length: {{ starship.length }}, Passengers:
+    {{ starship.passengers }}
+  </mat-card-content>
   <mat-card-footer>
     <mat-card-title>{{ starship.name }}</mat-card-title>
     <mat-card-subtitle>{{ starship.hyperdriveRating }}</mat-card-subtitle>
